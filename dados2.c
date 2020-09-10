@@ -70,11 +70,7 @@ int main(void)
             {
                 if (!strcmp(cad[i].nome, cad[4].nome))
                 {
-                    cad[i].idade = cad[4].idade;
-                    cad[i].salario = cad[4].salario;
-                    strcpy(cad[i].endr.rua, cad[4].endr.rua);
-                    cad[i].endr.numero = cad[4].endr.numero;
-                    strcpy(cad[i].endr.estado, cad[4].endr.estado);
+                    cad[i] = cad[4];
                     check++;
                     break;
                 }
@@ -87,7 +83,7 @@ int main(void)
                 printf("Registro ausente\n");
         }
         else
-            flag++;        
+            flag++;
     }
     return 0;
 }
